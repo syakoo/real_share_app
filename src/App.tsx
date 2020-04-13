@@ -1,23 +1,25 @@
-import React from 'react';
+import React from 'react'
+import { Route, Switch } from 'react-router'
+import { HashRouter } from 'react-router-dom'
 
-function App() {
+import { pages } from './components/pages'
+// ____________________________________________________________________________
+//
+export const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <HashRouter>
+      <Switch>
+        {pages.map((page) => (
+          <Route
+            exact
+            key={`PAGE-${page.name}`}
+            path={page.path}
+            component={page.component}
+          />
+        ))}
+      </Switch>
+    </HashRouter>
+  )
 }
 
-export default App;
+export default App
