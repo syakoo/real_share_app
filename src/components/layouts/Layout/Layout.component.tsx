@@ -1,5 +1,4 @@
 import React from 'react'
-import { useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 
 import styles from './Layout.module.scss'
@@ -13,7 +12,9 @@ export const Layout: React.FC = ({ children }) => {
       <div className={styles.body}>{children}</div>
       <div className={styles.footer}>
         {pages.map((page) => (
-          <Link to={page.path}>{page.name}</Link>
+          <Link key={`PATH-${page.name}`} to={page.path}>
+            {page.name}
+          </Link>
         ))}
       </div>
     </div>
