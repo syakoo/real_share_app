@@ -1,5 +1,5 @@
 import { ConfigActionTypes } from './config.types'
-import { MyError } from '#/types/store'
+import { MyError } from '../../types/store'
 // ____________________________________________________________________________
 //
 export const setError = (error: MyError['message']) => ({

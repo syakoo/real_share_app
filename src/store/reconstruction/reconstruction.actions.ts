@@ -1,6 +1,6 @@
 import { ReconstructionActionTypes } from './reconstruction.types'
 
-import { Share } from '#/types/store'
+import { Share } from '../../types/store'
 // ____________________________________________________________________________
 //
 export const initReconstructionState = () => ({
@@ -12,7 +12,17 @@ export const setMessage = (message: string) => ({
   payload: { message },
 })
 
-export const appendShare = (share: Share) => ({
-  type: ReconstructionActionTypes.APPEND_SHARE,
-  payload: { share },
+export const setShares = (shares: Share[]) => ({
+  type: ReconstructionActionTypes.SET_SHARES,
+  payload: { shares },
+})
+
+export const appendShareFromText = (text: string) => ({
+  type: ReconstructionActionTypes.APPEND_SHARE_FROM_TEXT,
+  payload: { text },
+})
+
+export const changeIsReady = (isReady: boolean) => ({
+  type: ReconstructionActionTypes.CHANGE_ISREADY,
+  payload: { isReady },
 })

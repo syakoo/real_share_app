@@ -1,20 +1,10 @@
 import { SharingActionTypes } from './sharing.types'
 
-import { Share } from '#/types/store'
+import { MessageForm } from '../../types/form'
 // ____________________________________________________________________________
 //
 export const initSharingState = () => ({
   type: SharingActionTypes.INIT_SHARING_STATE,
-})
-
-export const setMessage = (message: string) => ({
-  type: SharingActionTypes.SET_MESSAGE,
-  payload: { message },
-})
-
-export const setShares = (shares: Share[]) => ({
-  type: SharingActionTypes.SET_SHARES,
-  payload: { shares },
 })
 
 export const setCounter = (count: number) => ({
@@ -24,4 +14,13 @@ export const setCounter = (count: number) => ({
 
 export const decrementCounter = () => ({
   type: SharingActionTypes.DECREMENT_COUNTER,
+})
+
+export const startSharing = (messageForm: MessageForm) => ({
+  type: SharingActionTypes.START_SHARING,
+  payload: { messageForm },
+})
+
+export const endSharing = () => ({
+  type: SharingActionTypes.END_SHARING,
 })

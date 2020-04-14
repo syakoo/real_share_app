@@ -1,7 +1,8 @@
-import { Share, ReducerActions } from '#/types/store'
+import { Share, ReducerActions } from '../../types/store'
 //_____________________________________________________________________________
 //
 export interface ReconstructionState {
+  isReady: boolean
   message: string
   shares: Share[]
 }
@@ -11,6 +12,7 @@ export type ReconstructionActions = ReducerActions<
 // ____________________________________________________________________________
 //
 export const initialState: ReconstructionState = {
+  isReady: false,
   message: '',
   shares: [],
 }
@@ -31,10 +33,15 @@ export const reconstructionReducer = (
         ...state,
         message: action.payload.message,
       }
-    case 'RECONSTRUCTION:APPEND_SHARE':
+    case 'RECONSTRUCTION:SET_SHARES':
       return {
         ...state,
-        shares: [...state.shares, action.payload.share],
+        shares: action.payload.shares,
+      }
+    case 'RECONSTRUCTION:CHANGE_ISREADY':
+      return {
+        ...state,
+        isReady: action.payload.isReady,
       }
     default:
       return state

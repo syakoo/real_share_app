@@ -5,23 +5,27 @@ import { Provider } from 'react-redux'
 
 import { pages } from './components/pages'
 import { store } from './store'
+
+import { NFCGate } from './components/organisms/NFCGate/NFCGate.component'
 // ____________________________________________________________________________
 //
 export const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <HashRouter>
-        <Switch>
-          {pages.map((page) => (
-            <Route
-              exact
-              key={`PAGE-${page.name}`}
-              path={page.path}
-              component={page.component}
-            />
-          ))}
-        </Switch>
-      </HashRouter>
+      <NFCGate>
+        <HashRouter>
+          <Switch>
+            {pages.map((page) => (
+              <Route
+                exact
+                key={`PAGE-${page.name}`}
+                path={page.path}
+                component={page.component}
+              />
+            ))}
+          </Switch>
+        </HashRouter>
+      </NFCGate>
     </Provider>
   )
 }

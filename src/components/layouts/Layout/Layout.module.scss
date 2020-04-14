@@ -3,17 +3,21 @@
 .layout {
   max-width: 850px;
   margin: 0px auto;
+  overflow: auto;
 
   .body {
-    height: calc(100vh - 2rem);
+    height: 100vh;
     background-color: $gray2;
     box-sizing: border-box;
     color: $black;
-    overflow: auto;
     padding: 1rem;
   }
   .footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
     height: 2rem;
+    width: 100%;
     background-color: $primary;
     display: flex;
     justify-content: center;

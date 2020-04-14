@@ -1,4 +1,4 @@
-import { MyError, ReducerActions } from '#/types/store'
+import { MyError, ReducerActions } from '../../types/store'
 // ____________________________________________________________________________
 //
 export interface ConfigState {
