@@ -42,7 +42,7 @@ export const MessageForm: React.FC = () => {
         value={num}
         setValue={setNum}
         min={threshhold}
-        max={5}
+        max={9}
       />
       <div>
         <button onClick={handleSharingStart}>Sharing</button>
