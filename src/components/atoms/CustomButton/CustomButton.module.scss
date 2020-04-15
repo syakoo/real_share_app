@@ -1,0 +1,16 @@
+@import '../../layouts/variables';
+
+.customButton {
+  margin: 1rem 0px;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  transition: 0.2s;
+  background-color: $secondary;
+  border: 1px solid $secondary;
+  border-radius: 5px;
+  color: #e0e0e0;
+  &:disabled {
+    background-color: rgba($secondary, 0.2);
+    border: 1px solid rgba($secondary, 0.3);
+  }
+}

@@ -5,6 +5,7 @@ import {
   CustomInputText,
   CustomInputNumber,
 } from '../../atoms/CustomInput/CustomInput.components'
+import { CustomButton } from '../../atoms/CustomButton/CustomButton.component'
 
 import { startSharing } from '../../../store/sharing/sharing.actions'
 
@@ -23,13 +24,17 @@ export const MessageForm: React.FC = () => {
       t: threshhold,
       n: num,
     }
-    console.log([messageForm])
     dispatch(startSharing(messageForm))
   }, [dispatch, message, threshhold, num])
 
   return (
     <div>
-      <CustomInputText label="Message" value={message} setValue={setMessage} />
+      <CustomInputText
+        label="Message"
+        value={message}
+        setValue={setMessage}
+        maxLength={20}
+      />
       <CustomInputNumber
         label="Threshhold"
         value={threshhold}
@@ -44,8 +49,10 @@ export const MessageForm: React.FC = () => {
         min={threshhold}
         max={9}
       />
-      <div>
-        <button onClick={handleSharingStart}>Sharing</button>
+      <div style={{ textAlign: 'center' }}>
+        <CustomButton onClick={handleSharingStart} disabled={!message}>
+          Sharing
+        </CustomButton>
       </div>
     </div>
   )

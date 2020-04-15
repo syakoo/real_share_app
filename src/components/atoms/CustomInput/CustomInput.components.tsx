@@ -51,18 +51,15 @@ export const CustomInputNumber: React.FC<CustomInputNumber> = ({
   max,
   ...otherProps
 }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault()
-
-    setValue(Number(e.target.value))
-  }
   const handleIncrement = useCallback(() => {
     if (value < max) {
+      navigator.vibrate(50)
       setValue(value + 1)
     }
   }, [value])
   const handleDecrement = useCallback(() => {
     if (value > min) {
+      navigator.vibrate(50)
       setValue(value - 1)
     }
   }, [value])
@@ -70,7 +67,7 @@ export const CustomInputNumber: React.FC<CustomInputNumber> = ({
   return (
     <div className={styles.form}>
       {label ? (
-        <label>
+        <>
           <span className={styles.label}>{label}</span>
           <div className={styles.inputNum}>
             <button onClick={handleDecrement} disabled={value <= min}>
@@ -81,7 +78,7 @@ export const CustomInputNumber: React.FC<CustomInputNumber> = ({
               +
             </button>
           </div>
-        </label>
+        </>
       ) : (
         <div className={styles.inputNum}>
           <button onClick={handleDecrement}>-</button>
