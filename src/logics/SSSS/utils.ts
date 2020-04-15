@@ -1,4 +1,4 @@
-export interface coordinate {
+export interface Coordinate {
   x: number
   y: number
 }
@@ -13,8 +13,20 @@ export const elInverse = (el: number, q: number): number => {
   return modExp(el, q - 2, q)
 }
 
-export const seekIntercept = (shares: coordinate[], q: number): number => {
-  return 0
+export const seekIntercept = (shares: Coordinate[], q: number): number => {
+  let result = 0
+
+  for (const { x, y } of shares) {
+    let res = y
+    for (const s of shares) {
+      if (x === s.x) continue
+      res *= (-s.x * elInverse(x - s.x, q)) % q
+    }
+    result += res
+  }
+  result = result < 0 ? (result % q) + q : result % q
+
+  return result
 }
 // __________________________
 //

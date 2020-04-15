@@ -40,3 +40,14 @@ test('elInverse(element, q)', () => {
     }
   }
 })
+// ____________________________________________________________________________
+//
+test('seekIntercept(shares, q)', () => {
+  const mockShares: utils.Coordinate[] = [
+    { x: 80, y: 1 },
+    { x: 81, y: 9 },
+  ]
+  const mockMod = 11
+  const expected = 10
+  expect(utils.seekIntercept(mockShares, mockMod)).toBe(expected)
+})
