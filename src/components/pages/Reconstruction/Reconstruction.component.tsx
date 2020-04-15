@@ -19,10 +19,9 @@ export const ReconstructionPage: React.FC<RouteComponentProps> = () => {
       dispatch(initReconstructionState())
     }
   }, [dispatch])
-  
+
   return (
-    <Layout>
-      <h1>Reconstruction</h1>
+    <Layout pageTitle="Reconstcution">
       <ReconstructionOrg />
     </Layout>
   )

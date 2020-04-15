@@ -1,6 +1,11 @@
 import React, { useState, useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 
+import {
+  CustomInputText,
+  CustomInputNumber,
+} from '../../atoms/CustomInput/CustomInput.components'
+
 import { startSharing } from '../../../store/sharing/sharing.actions'
 
 import { MessageForm as TMessageForm } from '../../../types/form'
@@ -24,28 +29,23 @@ export const MessageForm: React.FC = () => {
 
   return (
     <div>
-      <label>
-        <span>message</span>
-        <input value={message} onChange={(e) => setMessage(e.target.value)} />
-      </label>
-      <label>
-        <span>threshhold</span>
-        <input
-          type="number"
-          value={threshhold}
-          onChange={(e) => setThreshhold(Number(e.target.value))}
-        />
-      </label>
-      <label>
-        <span>num</span>
-        <input
-          type="number"
-          value={num}
-          onChange={(e) => setNum(Number(e.target.value))}
-        />
-      </label>
+      <CustomInputText label="Message" value={message} setValue={setMessage} />
+      <CustomInputNumber
+        label="Threshhold"
+        value={threshhold}
+        setValue={setThreshhold}
+        min={2}
+        max={num}
+      />
+      <CustomInputNumber
+        label="Number of Shares"
+        value={num}
+        setValue={setNum}
+        min={threshhold}
+        max={5}
+      />
       <div>
-        <button onClick={handleSharingStart}>next</button>
+        <button onClick={handleSharingStart}>Sharing</button>
       </div>
     </div>
   )

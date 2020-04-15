@@ -9,7 +9,7 @@ export const getRandomIntList = (n: number, q: number): number[] => {
 }
 
 export const elInverse = (el: number, q: number): number => {
-  if (el == 0) return 1
+  if (el === 0) return 1
   return modExp(el, q - 2, q)
 }
 
@@ -40,7 +40,7 @@ const modExp = (a: number, b: number, n: number) => {
     const leastSignificantBit = b % 2
     b = Math.floor(b / 2)
 
-    if (leastSignificantBit == 1) {
+    if (leastSignificantBit === 1) {
       result = result * x
       result = result % n
     }

@@ -11,6 +11,30 @@
     box-sizing: border-box;
     color: $black;
     padding: 1rem;
+    padding-top: .5rem;
+    .title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: $primary;
+      font-family: 'Pacifico', cursive;
+      display: flex;
+      align-items: center;
+      
+      &:before,
+      &:after {
+        content: '';
+        flex-grow: 1;
+        height: 1px;
+        background-color: $primary;
+      }
+
+      &::before {
+        margin-right: 1rem;
+      }
+      &::after{
+        margin-left: 1rem;
+      }
+    }
   }
   .footer {
     position: fixed;

@@ -12,7 +12,6 @@ test('sharing({message, n, t})', () => {
 
   for (const msgForm of testCase) {
     const res = sharing(msgForm)
-    console.log({ res })
     const xSet = new Set(res.map((s) => s.x))
     // each share must be a distinct point
     expect(xSet.size).toBe(msgForm.n)

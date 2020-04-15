@@ -10,6 +10,7 @@ import {
 import { setError } from '../config/config.actions'
 import { writingNDEF } from '../nfc/nfc.sagas'
 import { shareToStr } from '../../logics/convertor'
+import { sharing as SSSSSharing } from '../../logics/SSSS/sharing'
 
 import { SharingActionTypes } from './sharing.types'
 import { Share } from '../../types/store'
@@ -27,14 +28,7 @@ function* sendShares(counter: number, shares: Share[]) {
 export function* sharing(action: ReturnType<typeof startSharing>) {
   try {
     const { message, t, n } = action.payload.messageForm
-    // TODO: calc shares from message, t, n
-    const shares: Share[] = [
-      { sharingId: 'TEST', t, x: 1, y: 'A' },
-      { sharingId: 'TEST', t, x: 2, y: 'B' },
-      { sharingId: 'TEST', t, x: 3, y: 'C' },
-      { sharingId: 'TEST', t, x: 4, y: 'D' },
-      { sharingId: 'TEST', t, x: 5, y: 'E' },
-    ]
+    const shares: Share[] = SSSSSharing({ message, n, t })
     yield put(setCounter(n))
     yield sendShares(n, shares)
     yield put(endSharing())

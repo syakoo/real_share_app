@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
+import { reconstruction as SSSSReconstruction } from '../../../logics/SSSS/reconstruction'
 // ____________________________________________________________________________
 //
 export const ReconstructionOrg: React.FC = () => {
@@ -12,7 +13,7 @@ export const ReconstructionOrg: React.FC = () => {
 
     const { t } = shares[0]
     if (t <= shares.length) {
-      setMessage('reconstruction!!')
+      setMessage(SSSSReconstruction(shares.slice(0, t)))
     }
   }, [shares])
 

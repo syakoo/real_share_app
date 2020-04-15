@@ -4,11 +4,11 @@ import { Share } from '../types/store'
 // ____________________________________________________________________________
 //
 export const shareToStr = (share: Share): string => {
-  return `${share.sharingId},${share.t},${share.x},${share.y}`
+  return `${share.sharingId},,${share.t},,${share.x},,${share.y}`
 }
 
 export const strToShare = (str: string): Share => {
-  const list = str.split(',')
+  const list = str.split(',,')
 
   try {
     const share: Share = {
@@ -24,7 +24,12 @@ export const strToShare = (str: string): Share => {
 }
 
 export const encodeToNumArr = (str: string) => {
-  const encoder = new util.TextEncoder()
+  let encoder: TextEncoder
+  if ('TextEncoder' in window) {
+    encoder = new TextEncoder()
+  } else {
+    encoder = new util.TextEncoder()
+  }
   const u8Array = encoder.encode(str)
   const result = Array.from(u8Array)
 
@@ -33,7 +38,12 @@ export const encodeToNumArr = (str: string) => {
 
 export const decodeFromNumArr = (numArr: number[]) => {
   const u8Array = new Uint8Array(numArr)
-  const decoder = new util.TextDecoder()
+  let decoder: TextDecoder
+  if ('TextDecoder' in window) {
+    decoder = new TextDecoder()
+  } else {
+    decoder = new util.TextDecoder() as TextDecoder
+  }
   const result = decoder.decode(u8Array)
 
   return result

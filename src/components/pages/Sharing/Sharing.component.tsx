@@ -21,13 +21,10 @@ export const SharingPage: React.FC<RouteComponentProps> = () => {
   }, [step, dispatch])
 
   return (
-    <Layout>
-      <h1>Sharing</h1>
-      <div>
-        {step === 'INPUT' && <MessageForm />}
-        {step === 'SHARING' && <div>put NFC</div>}
-        {step === 'SUCCESS' && <div>Completed!!</div>}
-      </div>
+    <Layout pageTitle="Sharing">
+      {step === 'INPUT' && <MessageForm />}
+      {step === 'SHARING' && <div>put NFC</div>}
+      {step === 'SUCCESS' && <div>Completed!!</div>}
     </Layout>
   )
 }

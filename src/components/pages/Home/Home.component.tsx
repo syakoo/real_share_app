@@ -6,9 +6,8 @@ import { Layout } from '../../layouts/Layout/Layout.component'
 //
 export const HomePage: React.FC<RouteComponentProps> = () => {
   return (
-    <Layout>
+    <Layout >
       <div>
-        <h1>Home</h1>
       </div>
     </Layout>
   )
