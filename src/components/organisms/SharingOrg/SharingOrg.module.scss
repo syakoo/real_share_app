@@ -1,0 +1,11 @@
+@import '../../layouts/variables';
+
+.sharingComp {
+  height: 5rem;
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $info;
+    text-align: center;
+  }
+}

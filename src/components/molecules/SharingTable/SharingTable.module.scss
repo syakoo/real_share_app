@@ -1,0 +1,89 @@
+@import '../../layouts/variables';
+
+.sharingTable {
+  position: relative;
+  margin: 1rem;
+  height: 50%;
+  min-height: 300px;
+
+  .message {
+    position: absolute;
+    font-size: 1.5rem;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: fade-out-smaller 0.7s ease 0.3s forwards;
+  }
+}
+
+.cardTable {
+  .card {
+    position: absolute;
+    width: 100px;
+    height: 140px;
+    left: 50%;
+    top: 50%;
+    background-color: $primary;
+    border: 3px solid $secondary;
+    border-radius: 5px;
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 1s;
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: 2;
+    &.hidden {
+      animation: fade-out-over 1s ease forwards;
+    }
+  }
+}
+
+.info {
+  font-size: 2rem;
+  color: $secondary;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  animation: fade-in 0.5s ease 1.5s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes fade-out-smaller {
+  from {
+    opacity: 1;
+    font-size: 1rem;
+  }
+  to {
+    opacity: 0;
+    font-size: 5px;
+  }
+}
+@keyframes fade-out-over {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateY(360deg) scale(2);
+  }
+  80% {
+    transform: translate(-50%, -50%) rotateY(-180deg) scale(4);
+  }
+  90% {
+    transform: translate(-50%, -50%) rotateY(360deg) scale(8);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateY(-180deg) scale(16);
+    opacity: 0;
+  }
+}

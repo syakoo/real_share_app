@@ -56,13 +56,13 @@ export const CustomInputNumber: React.FC<CustomInputNumber> = ({
       navigator.vibrate(50)
       setValue(value + 1)
     }
-  }, [value])
+  }, [value, max, setValue])
   const handleDecrement = useCallback(() => {
     if (value > min) {
       navigator.vibrate(50)
       setValue(value - 1)
     }
-  }, [value])
+  }, [value, min, setValue])
 
   return (
     <div className={styles.form}>
