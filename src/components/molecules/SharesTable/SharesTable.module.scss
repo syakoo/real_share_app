@@ -1,0 +1,29 @@
+@import '../../layouts/variables';
+
+.sharesTable {
+  margin: 0.5em 0px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  tr {
+    border: solid 1px $primary;
+    cursor: pointer;
+
+    th,
+    td {
+      border: solid 1px $primary;
+      padding: 0.2em 0.5em;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    th {
+      color: $primary;
+
+      &:nth-child(1) {
+        width: 2rem;
+      }
+      &:nth-child(2) {
+        width: calc(100vw - 2rem);
+      }
+    }
+  }
+}

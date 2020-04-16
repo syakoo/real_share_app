@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 import { reconstruction as SSSSReconstruction } from '../../../logics/SSSS/reconstruction'
+
+import { SharesTable } from '../../molecules/SharesTable/SharesTable.component'
+
+import styles from './ReconstructionOrg.module.scss'
 // ____________________________________________________________________________
 //
 export const ReconstructionOrg: React.FC = () => {
@@ -19,10 +23,19 @@ export const ReconstructionOrg: React.FC = () => {
 
   return (
     <div>
-      {shares.map((share) => (
-        <span>{share.x}</span>
-      ))}
-      <h1>{message}</h1>
+      <div className={styles.cardTable}>
+        {shares.map((share) => (
+          <div className={styles.card} key={`CARD-${share.x}`}>
+            <span className={styles.y}>{share.y}</span>
+          </div>
+        ))}
+        {message && (
+          <div className={styles.messageBody}>
+            <span className={styles.message}>{message}</span>
+          </div>
+        )}
+      </div>
+      <div>{shares.length !== 0 && <SharesTable shares={shares} />}</div>
     </div>
   )
 }

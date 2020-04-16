@@ -11,7 +11,7 @@ export const sharing = ({ message, n, t }: MessageForm): Share[] => {
   if (t <= 1) throw Error('t must be greater than 1')
 
   const msgEncoded = encodeToNumArr(message)
-  const sharingId = String(Date.now()).slice(0, 6)
+  const sharingId = String(Date.now()).slice(-6)
 
   const sharesList: number[][] = [...Array(n)].map(() => [])
   msgEncoded.forEach((msg, i) => {

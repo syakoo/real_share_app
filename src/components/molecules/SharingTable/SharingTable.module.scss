@@ -32,6 +32,7 @@
     transition: transform 0.5s;
     transition-delay: 1s;
     transform: translate(-50%, -50%) rotate(0deg);
+    box-shadow: 0px 2px 3px 3px rgba($black2, 0.3);
     z-index: 2;
     &.hidden {
       animation: fade-out-over 1s ease forwards;
