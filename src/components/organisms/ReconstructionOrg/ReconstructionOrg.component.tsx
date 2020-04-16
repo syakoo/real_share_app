@@ -29,13 +29,27 @@ export const ReconstructionOrg: React.FC = () => {
             <span className={styles.y}>{share.y}</span>
           </div>
         ))}
+        {!message && (
+          <div className={styles.waves}>
+            <div className={styles.wave}></div>
+            <div className={styles.wave}></div>
+            <div className={styles.wave}></div>
+            <div className={styles.wave}></div>
+          </div>
+        )}
         {message && (
           <div className={styles.messageBody}>
             <span className={styles.message}>{message}</span>
           </div>
         )}
       </div>
-      <div>{shares.length !== 0 && <SharesTable shares={shares} />}</div>
+      <div>
+        <div className={styles.info}>
+          {message ? 'Completed!!' : 'PUT SHARE'}
+          {shares.length !== 0 && `(${shares.length}/${shares[0].t})`}
+        </div>
+        {shares.length !== 0 && <SharesTable shares={shares} />}
+      </div>
     </div>
   )
 }

@@ -36,7 +36,7 @@ export function* sharing(action: ReturnType<typeof startSharing>) {
     console.error({ error })
     yield put(
       setError(
-        'シェア中にエラーが発生しました。お手数ですが、最初からやり直してください。'
+        'An error occurred while sharing. Please start again from the beginning.'
       )
     )
     yield put(initSharingState())

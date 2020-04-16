@@ -3,9 +3,10 @@
 .layout {
   max-width: 850px;
   margin: 0px auto;
-  overflow: auto;
-
+  
   .body {
+    overflow: auto;
+    overflow-y: scroll;
     height: 100vh;
     background-color: $gray2;
     box-sizing: border-box;

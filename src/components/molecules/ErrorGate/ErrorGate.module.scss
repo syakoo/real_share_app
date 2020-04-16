@@ -1,0 +1,41 @@
+@import '../../layouts/variables';
+
+.errorMain > div {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  padding: 0.5rem;
+  z-index: 100;
+  border: 2px solid $error;
+  border-radius: 5px;
+  background-color: rgba($error, 0.8);
+  backdrop-filter: blur(2px);
+  color: white;
+  animation: fade-in 3s ease 0s forwards;
+  :global {
+    .error__title {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: bold;
+      &:after {
+        content: ' :';
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translate(-50%, -120%);
+  }
+  20% {
+    transform: translate(-50%, 10%);
+  }
+  50% {
+    transform: translate(-50%, 10%);
+  }
+  100% {
+    transform: translate(-50%, -120%);
+  }
+}

@@ -24,18 +24,18 @@ function* appendingShareFromText(
   try {
     share = strToShare(text)
   } catch (error) {
-    yield put(setError('データの形式が違います。'))
+    yield put(setError('The format of the data is different.'))
     return
   }
 
   if (shares.length !== 0) {
     if (shares[0].sharingId !== share.sharingId) {
-      yield put(setError('別のデータのシェアです。'))
+      yield put(setError('This is a share of another data.'))
       return
     }
     if (shares.find((s) => s.x === share.x)) {
       yield put(
-        setError('重複して読み込んだか、既に同じシェアを読み込んでいます。')
+        setError('Duplicate loads or the same share has already been loaded.')
       )
       return
     }
