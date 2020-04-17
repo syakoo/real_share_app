@@ -6,6 +6,7 @@ import { appendShareFromText } from '../reconstruction/reconstruction.actions'
 
 import { NFCActionTypes } from './nfc.types'
 import { State } from '../rootReducer'
+import { setError } from 'store/config/config.actions'
 // ____________________________________________________________________________
 //
 async function writeNDEF(message: string, writer: NDEFWriter) {
@@ -18,7 +19,6 @@ async function readNFC(reader: NDEFReader, dispatch: Dispatch<any>) {
   }
 
   reader.onreading = (event) => {
-    console.log({ event })
     for (const record of event.message.records) {
       if (record.recordType === 'text') {
         const textDecoder = new TextDecoder()
@@ -35,7 +35,6 @@ export function* writingNDEF(message: string) {
     nfc: { writer },
   }: State = yield select()
 
-  console.log({ writer, message })
   if (writer) {
     yield call(writeNDEF, message, writer)
   }
@@ -47,7 +46,11 @@ function* readingNFC(store: Store<State>) {
 
   if (reader) {
     const { dispatch } = store
-    yield call(readNFC, reader, dispatch)
+    try {
+      yield call(readNFC, reader, dispatch)
+    } catch (error) {
+      yield put(setError('An error occurred while reading. Please try again.'))
+    }
   }
 }
 function* appendFetchedMessageToShares(

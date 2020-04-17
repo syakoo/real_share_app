@@ -19,9 +19,15 @@ import { Share } from '../../types/store'
 function* sendShares(counter: number, shares: Share[]) {
   while (counter > 0) {
     const shareMsg = shareToStr(shares[counter - 1])
-    yield call(writingNDEF, shareMsg)
-    counter--
-    yield put(decrementCounter())
+    try {
+      yield call(writingNDEF, shareMsg)
+      counter--
+      yield put(decrementCounter())
+    } catch (error) {
+      yield put(
+        setError('An error occurred while writing shares. Please try again.')
+      )
+    }
     yield new Promise((resolve) => setTimeout(resolve, 1000))
   }
 }
@@ -33,7 +39,6 @@ export function* sharing(action: ReturnType<typeof startSharing>) {
     yield sendShares(n, shares)
     yield put(endSharing())
   } catch (error) {
-    console.error({ error })
     yield put(
       setError(
         'An error occurred while sharing. Please start again from the beginning.'
