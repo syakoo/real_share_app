@@ -1,0 +1,17 @@
+@import '../../layouts/variables';
+
+.img {
+  text-align: center;
+  img {
+    height: 200px;
+  }
+}
+
+.card {
+  h1 {
+    color: $primary;
+  }
+  .warning {
+    color: $error;
+  }
+}

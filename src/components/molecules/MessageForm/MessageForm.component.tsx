@@ -36,7 +36,7 @@ export const MessageForm: React.FC = () => {
         maxLength={20}
       />
       <CustomInputNumber
-        label="Threshhold"
+        label="Threshold"
         value={threshhold}
         setValue={setThreshhold}
         min={2}
