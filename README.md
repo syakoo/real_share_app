@@ -1,4 +1,4 @@
-# Real Share
+# Real Sharing
 A simulation web app of a secret sharing scheme using NFC.
 
 - gh-pages: https://syakoo.github.io/real_share_app/

@@ -12,10 +12,10 @@ export const HomePage: React.FC<RouteComponentProps> = () => {
   return (
     <Layout>
       <div className={styles.img}>
-        <img src={logo} alt="real share" />
+        <img src={logo} alt="real sharing" />
       </div>
       <div className={styles.card}>
-        <h1>Real Share</h1>
+        <h1>Real Sharing</h1>
         <p>A simulation web app of a secret sharing scheme using NFC.</p>
         <ul>
           <li>
