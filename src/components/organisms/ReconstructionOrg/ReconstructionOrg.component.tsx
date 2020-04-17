@@ -34,7 +34,6 @@ export const ReconstructionOrg: React.FC = () => {
             <div className={styles.wave}></div>
             <div className={styles.wave}></div>
             <div className={styles.wave}></div>
-            <div className={styles.wave}></div>
           </div>
         )}
         {message && (
