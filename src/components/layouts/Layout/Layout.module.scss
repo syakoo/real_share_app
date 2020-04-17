@@ -43,7 +43,8 @@
     left: 0px;
     bottom: 0px;
     width: 100%;
-    background-color: $primary;
+    background-color: rgba($black, 0.8);
+    backdrop-filter: blur(2px);
     display: flex;
     justify-content: center;
     a {
