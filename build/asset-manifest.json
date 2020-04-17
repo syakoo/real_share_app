@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.91a7fc43.chunk.css",
+    "main.js": "/static/js/main.37676d6f.chunk.js",
+    "main.js.map": "/static/js/main.37676d6f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6e707ae9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6e707ae9.js.map",
+    "static/js/2.72c307cf.chunk.js": "/static/js/2.72c307cf.chunk.js",
+    "static/js/2.72c307cf.chunk.js.map": "/static/js/2.72c307cf.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ec2a3d92a06ae585074b9bfc48258cce.js": "/precache-manifest.ec2a3d92a06ae585074b9bfc48258cce.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.91a7fc43.chunk.css.map": "/static/css/main.91a7fc43.chunk.css.map",
+    "static/js/2.72c307cf.chunk.js.LICENSE.txt": "/static/js/2.72c307cf.chunk.js.LICENSE.txt",
+    "static/media/Nfc-icon-vector-01.svg": "/static/media/Nfc-icon-vector-01.ac821891.svg",
+    "static/media/home.svg": "/static/media/home.794daaaf.svg",
+    "static/media/logo.svg": "/static/media/logo.82b50d8d.svg",
+    "static/media/reconstruction.svg": "/static/media/reconstruction.3126da9b.svg",
+    "static/media/sharing.svg": "/static/media/sharing.88b1bd60.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e707ae9.js",
+    "static/js/2.72c307cf.chunk.js",
+    "static/css/main.91a7fc43.chunk.css",
+    "static/js/main.37676d6f.chunk.js"
+  ]
+}
