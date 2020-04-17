@@ -1,5 +1,7 @@
 # Real Share
 A simulation web app of a secret sharing scheme using NFC.
+gh-pages: https://syakoo.github.io/real_share_app/
+demo movie: https://youtu.be/6DLYic2Zvy0
 
 # What's the Secret Sharing
 From Wikipedia[Secret sharing](https://en.wikipedia.org/wiki/Secret_sharing)
