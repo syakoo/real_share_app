@@ -17,6 +17,20 @@ export const HomePage: React.FC<RouteComponentProps> = () => {
       <div className={styles.card}>
         <h1>Real Share</h1>
         <p>A simulation web app of a secret sharing scheme using NFC.</p>
+        <ul>
+          <li>
+            Repo:{' '}
+            <a href="https://github.com/syakoo/real_share_app">
+              https://github.com/syakoo/real_share_app
+            </a>
+          </li>
+          <li>
+            Movie:{' '}
+            <a href="https://youtu.be/6DLYic2Zvy0">
+              https://youtu.be/6DLYic2Zvy0
+            </a>
+          </li>
+        </ul>
       </div>
       <div className={styles.card}>
         <h1>What's the Secret Sharing</h1>
@@ -56,13 +70,9 @@ export const HomePage: React.FC<RouteComponentProps> = () => {
           </span>
         </p>
         <h3>Threshold</h3>
-        <p>
-          The number of shares needed to unlock the secret.
-        </p>
+        <p>The number of shares needed to unlock the secret.</p>
         <h3>Number of Shares</h3>
-        <p>
-          The number of shares for writing data to NFC tags and cards.
-        </p>
+        <p>The number of shares for writing data to NFC tags and cards.</p>
       </div>
     </Layout>
   )
