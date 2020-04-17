@@ -2,10 +2,12 @@
   "name": "real_share",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://syakoo.github.io/real_share_app/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "node-sass": "^4.13.1",
@@ -29,6 +31,7 @@
     "@types/react-router-dom": "^5.1.4",
     "@types/redux": "^3.6.0",
     "@types/redux-logger": "^3.0.7",
+    "gh-pages": "^2.2.0",
     "ts-jest": "^25.3.1",
     "typescript": "^3.8.3"
   },
