@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/real_share_app/static/css/main.e0455335.chunk.css",
+    "main.js": "/real_share_app/static/js/main.2347133f.chunk.js",
+    "main.js.map": "/real_share_app/static/js/main.2347133f.chunk.js.map",
+    "runtime-main.js": "/real_share_app/static/js/runtime-main.46533265.js",
+    "runtime-main.js.map": "/real_share_app/static/js/runtime-main.46533265.js.map",
+    "static/js/2.15c1982f.chunk.js": "/real_share_app/static/js/2.15c1982f.chunk.js",
+    "static/js/2.15c1982f.chunk.js.map": "/real_share_app/static/js/2.15c1982f.chunk.js.map",
+    "index.html": "/real_share_app/index.html",
+    "precache-manifest.556ffd72acd85a5892d60101f17631c1.js": "/real_share_app/precache-manifest.556ffd72acd85a5892d60101f17631c1.js",
+    "service-worker.js": "/real_share_app/service-worker.js",
+    "static/css/main.e0455335.chunk.css.map": "/real_share_app/static/css/main.e0455335.chunk.css.map",
+    "static/js/2.15c1982f.chunk.js.LICENSE.txt": "/real_share_app/static/js/2.15c1982f.chunk.js.LICENSE.txt",
+    "static/media/Nfc-icon-vector-01.svg": "/real_share_app/static/media/Nfc-icon-vector-01.ac821891.svg",
+    "static/media/home.svg": "/real_share_app/static/media/home.794daaaf.svg",
+    "static/media/logo.svg": "/real_share_app/static/media/logo.82b50d8d.svg",
+    "static/media/reconstruction.svg": "/real_share_app/static/media/reconstruction.3126da9b.svg",
+    "static/media/sharing.svg": "/real_share_app/static/media/sharing.88b1bd60.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.46533265.js",
+    "static/js/2.15c1982f.chunk.js",
+    "static/css/main.e0455335.chunk.css",
+    "static/js/main.2347133f.chunk.js"
+  ]
+}
