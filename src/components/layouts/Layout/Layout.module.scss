@@ -3,7 +3,7 @@
 .layout {
   max-width: 850px;
   margin: 0px auto;
-  
+
   .body {
     overflow: auto;
     overflow-y: scroll;
@@ -12,7 +12,7 @@
     box-sizing: border-box;
     color: $black;
     padding: 1rem;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
     .title {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -20,7 +20,7 @@
       font-family: 'Pacifico', cursive;
       display: flex;
       align-items: center;
-      
+
       &:before,
       &:after {
         content: '';
@@ -32,7 +32,7 @@
       &::before {
         margin-right: 1rem;
       }
-      &::after{
+      &::after {
         margin-left: 1rem;
       }
     }
@@ -41,13 +41,29 @@
     position: fixed;
     left: 0px;
     bottom: 0px;
-    height: 2rem;
     width: 100%;
     background-color: $primary;
     display: flex;
     justify-content: center;
     a {
-      margin: auto 1rem;
+      padding: 0.5rem;
+      margin: 0px 5px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      img {
+        width: 4rem;
+      }
+      span {
+        text-align: center;
+        font-size: 0.5rem;
+        font-weight: bold;
+        color: $gray;
+      }
+      &:active {
+        background-color: $secondary;
+      }
     }
   }
 }

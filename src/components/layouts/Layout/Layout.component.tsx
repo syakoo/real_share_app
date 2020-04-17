@@ -24,7 +24,8 @@ export const Layout: React.FC<Layout> = ({ children, pageTitle }) => {
         <div className={styles.footer}>
           {pages.map((page) => (
             <Link key={`PATH-${page.name}`} to={page.path}>
-              {page.name}
+              <img src={page.iconUrl} alt={page.name} />
+              <span>{page.name}</span>
             </Link>
           ))}
         </div>

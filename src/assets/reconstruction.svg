@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g transform="translate(0, 0)">
+    <rect width="50" height="40" x="7" y="12" rx="1" fill="#252525" stroke="#a0a0a0" stroke-width="2" />
+    <line x1="7" y1="12" x2="33" y2="30" stroke="#a0a0a0" stroke-width="2" />
+    <line x1="57" y1="12" x2="32" y2="30" stroke="#a0a0a0" stroke-width="2" />
+    <text font-size="36" x="23" y="43" fill="#a0a0a0" font-weight="bold" font-family='Arial'>?</text>
+  </g>
+</svg>
