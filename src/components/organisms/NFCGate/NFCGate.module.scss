@@ -2,5 +2,10 @@
 
 .denied {
   padding: 1rem;
-  background-color: $gray;
+  background-color: $gray2;
+  color: black;
+  text-align: center;
+  h1 {
+    color: $primary;
+  }
 }

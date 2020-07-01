@@ -21,7 +21,7 @@ export const NFCGate: React.FC = ({ children }) => {
 
 const NFCDenied: React.FC = () => (
   <div className={styles.denied}>
-    <h1>NFC Did not supported</h1>
+    <h1>NFC Did Not Supported</h1>
     <div>
       <h2>How to set WebNFC enabled</h2>
       <p>
