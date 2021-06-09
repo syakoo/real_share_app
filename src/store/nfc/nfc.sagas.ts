@@ -9,8 +9,8 @@ import { State } from '../rootReducer'
 import { setError } from 'store/config/config.actions'
 // ____________________________________________________________________________
 //
-async function writeNDEF(message: string, writer: NDEFWriter) {
-  await writer.write(message)
+async function writeNDEF(message: string, ndef: NDEFReader) {
+  await ndef.write(message)
 }
 async function readNFC(reader: NDEFReader, dispatch: Dispatch<any>) {
   reader.onerror = (error) => {
@@ -32,22 +32,22 @@ async function readNFC(reader: NDEFReader, dispatch: Dispatch<any>) {
 }
 export function* writingNDEF(message: string) {
   const {
-    nfc: { writer },
+    nfc: { ndef },
   }: State = yield select()
 
-  if (writer) {
-    yield call(writeNDEF, message, writer)
+  if (ndef) {
+    yield call(writeNDEF, message, ndef)
   }
 }
 function* readingNFC(store: Store<State>) {
   const {
-    nfc: { reader },
+    nfc: { ndef },
   }: State = yield select()
 
-  if (reader) {
+  if (ndef) {
     const { dispatch } = store
     try {
-      yield call(readNFC, reader, dispatch)
+      yield call(readNFC, ndef, dispatch)
     } catch (error) {
       yield put(setError('An error occurred while reading. Please try again.'))
     }
