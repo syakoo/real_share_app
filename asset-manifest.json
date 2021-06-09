@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/real_share_app/static/css/main.6563c9c3.chunk.css",
-    "main.js": "/real_share_app/static/js/main.9693e5f9.chunk.js",
-    "main.js.map": "/real_share_app/static/js/main.9693e5f9.chunk.js.map",
+    "main.css": "/real_share_app/static/css/main.185f9a54.chunk.css",
+    "main.js": "/real_share_app/static/js/main.24d03668.chunk.js",
+    "main.js.map": "/real_share_app/static/js/main.24d03668.chunk.js.map",
     "runtime-main.js": "/real_share_app/static/js/runtime-main.46533265.js",
     "runtime-main.js.map": "/real_share_app/static/js/runtime-main.46533265.js.map",
     "static/js/2.15c1982f.chunk.js": "/real_share_app/static/js/2.15c1982f.chunk.js",
     "static/js/2.15c1982f.chunk.js.map": "/real_share_app/static/js/2.15c1982f.chunk.js.map",
     "index.html": "/real_share_app/index.html",
-    "precache-manifest.2740f056e6d6044646f296fb05ac0fc3.js": "/real_share_app/precache-manifest.2740f056e6d6044646f296fb05ac0fc3.js",
+    "precache-manifest.8d4a80eca5e2e28c70a51a6f8f6865a3.js": "/real_share_app/precache-manifest.8d4a80eca5e2e28c70a51a6f8f6865a3.js",
     "service-worker.js": "/real_share_app/service-worker.js",
-    "static/css/main.6563c9c3.chunk.css.map": "/real_share_app/static/css/main.6563c9c3.chunk.css.map",
+    "static/css/main.185f9a54.chunk.css.map": "/real_share_app/static/css/main.185f9a54.chunk.css.map",
     "static/js/2.15c1982f.chunk.js.LICENSE.txt": "/real_share_app/static/js/2.15c1982f.chunk.js.LICENSE.txt",
-    "static/media/Nfc-icon-vector-01.svg": "/real_share_app/static/media/Nfc-icon-vector-01.ac821891.svg",
-    "static/media/home.svg": "/real_share_app/static/media/home.794daaaf.svg",
-    "static/media/logo.svg": "/real_share_app/static/media/logo.82b50d8d.svg",
-    "static/media/reconstruction.svg": "/real_share_app/static/media/reconstruction.3126da9b.svg",
-    "static/media/sharing.svg": "/real_share_app/static/media/sharing.88b1bd60.svg"
+    "static/media/Nfc-icon-vector-01.svg": "/real_share_app/static/media/Nfc-icon-vector-01.2382757f.svg",
+    "static/media/home.svg": "/real_share_app/static/media/home.aaa4b562.svg",
+    "static/media/logo.svg": "/real_share_app/static/media/logo.37bcc4f9.svg",
+    "static/media/reconstruction.svg": "/real_share_app/static/media/reconstruction.f5d24c9c.svg",
+    "static/media/sharing.svg": "/real_share_app/static/media/sharing.77452735.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.46533265.js",
     "static/js/2.15c1982f.chunk.js",
-    "static/css/main.6563c9c3.chunk.css",
-    "static/js/main.9693e5f9.chunk.js"
+    "static/css/main.185f9a54.chunk.css",
+    "static/js/main.24d03668.chunk.js"
   ]
 }
