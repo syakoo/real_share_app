@@ -4,28 +4,25 @@ import { ReducerActions } from '../../types/store'
 export interface NFCState {
   enabled: boolean
   fetchedMessage: string
-  reader: NDEFReader | null
-  writer: NDEFWriter | null
+  ndef: NDEFReader | null
 }
 export type NFCActions = ReducerActions<typeof import('./nfc.actions')>
 // ____________________________________________________________________________
 //
 const initialState: NFCState = {
-  enabled: 'NDEFReader' in window && 'NDEFWriter' in window,
+  enabled: 'NDEFReader' in window,
   fetchedMessage: '',
-  reader: null,
-  writer: null,
+  ndef: null,
 }
 // ____________________________________________________________________________
 //
 export const NFCReducer = (state = initialState, action: NFCActions) => {
   switch (action.type) {
     case 'NFC:INIT_NDEF':
-      if (state.enabled && !state.reader) {
+      if (state.enabled && !state.ndef) {
         return {
           ...state,
-          reader: new NDEFReader(),
-          writer: new NDEFWriter(),
+          ndef: new NDEFReader(),
         }
       } else {
         return state

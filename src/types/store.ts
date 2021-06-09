@@ -49,6 +49,7 @@ declare global {
     scan: () => Promise<any>
     onerror: (error: any) => void
     onreading: (event: NDEFReadingEvent) => void
+    write: (message: string, option?: { [k: string]: any }) => Promise<any>
   }
   export class NDEFWriter {
     write: (message: string, option?: { [k: string]: any }) => Promise<any>
